@@ -33,6 +33,7 @@
     "react-dom": "^15.4.0",
     "react-image-gallery": "^0.7.3",
     "react-tap-event-plugin": "git+https://github.com/zilverline/react-tap-event-plugin.git#master",
+    "serve-static": "git+https://github.com/arcturus/serve-static.git",
     "walk": "^2.3.9"
   }
 }
