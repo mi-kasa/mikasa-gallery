@@ -29,6 +29,8 @@ app.use('/gallery', serveStatic(IMAGE_FOLDER, {
   }
 }));
 
+app.use('/', serveStatic('./dist'));
+
 function getImages() {
   return new Promise((resolve, reject) => {
     let options = {
