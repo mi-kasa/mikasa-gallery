@@ -29,9 +29,9 @@ class Gallery extends Component {
   }
 
   fetchData() {
-    fetch('/api/v1/allphotos').then(req => {
+    fetch('api/v1/allphotos').then(req => {
       return req.json();
-      
+
     }).
     then((photos) => {
       this.setState({photos});

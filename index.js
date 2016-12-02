@@ -12,14 +12,14 @@ app.use(express.static('dist'));
 app.get('/api/v1/allphotos', (req, res) => {
   debug('Sending all photos');
   if (IMAGE_FOLDER == null) {
-    return res.json(images);  
+    return res.json(images);
   }
 
   getImages().
     then((imgs) => {
       return res.json(imgs);
     });
-  
+
 });
 
 app.use('/gallery', serveStatic(IMAGE_FOLDER, {
@@ -38,7 +38,7 @@ function getImages() {
     };
 
     var files = [];
-   
+
     debug('Walking directory ', IMAGE_FOLDER);
     walker = walk.walk(IMAGE_FOLDER, options);
     walker.on("directories", (root, dirStatsArray, next) => { next(); });
