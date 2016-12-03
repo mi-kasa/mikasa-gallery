@@ -4,10 +4,11 @@ const walk = require('walk');
 const mime = require('mime');
 const serveStatic = require('serve-static');
 const app = express();
+const path = require('path');
 
 const IMAGE_FOLDER = process.env.IMAGE_FOLDER || '/Users/arcturus/dev/android/MediaSync/server/uploads';
 
-app.use(express.static('dist'));
+app.use(express.static(path.join(__dirname, 'dist')));
 
 app.get('/api/v1/allphotos', (req, res) => {
   debug('Sending all photos');
