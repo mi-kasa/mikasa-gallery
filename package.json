@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "mikasa gallery component",
   "scripts": {
-    "start": "gulp",
-    "postinstall": "gulp build"
+    "start": "gulp"
   },
   "private": true,
   "devDependencies": {
